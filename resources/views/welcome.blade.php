@@ -17,8 +17,8 @@
             <div class="container">
                 <a class="navbar-brand" href="#">Rio's Library</a>
                 <div class="float-right">
-                    <a class="btn btn-primary" href="#">Sign In</a>
-                    <a class="btn btn-primary" href="#">Register</a>
+                    <a class="btn btn-primary" href="/login">Sign In</a>
+                    <a class="btn btn-primary" href="/register">Register</a>
                 </div>
             </div>
         </nav>
