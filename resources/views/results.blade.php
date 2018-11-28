@@ -59,7 +59,7 @@
                                     <button  class="btn btn-warning">{{'Section: '.$res->lib_section}}</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <button class="btn btn-primary btn-block">Borrow</button>
+                                    <button class="btn btn-primary btn-block borrow" data-id="{{$res->id}}" data-toggle="modal" data-target="#borrow" data-title="{{$res->title}}" data-author="{{$res->author}}" data-section="{{$res->lib_section}}"> Borrow</button>
                                 </div>
                             </div>
                         </div>
@@ -67,6 +67,8 @@
                 @empty
                     <p>No results.</p>
                 @endforelse
+
+                @include('borrow_modal')
             </div>
         </div>
     </div>

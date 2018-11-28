@@ -91,6 +91,13 @@
                 $("#lib_sec").css('display', 'none');
             }
         });
+
+        $('.borrow').click(function(){
+            $("#book_id").val($(this).data('id'))
+            $(".modal-body .title").text("Title: " + $(this).data('title'));
+            $(".modal-body .author").text("Author: " + $(this).data('author'));
+            $(".modal-body .library-section").text("Library Section: " + $(this).data('section'));
+        });
     </script>
 </body>
 </html>

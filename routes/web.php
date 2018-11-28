@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/search', 'SearchController@search');
+Route::post('/borrow', 'HomeController@borrow');
 
 Auth::routes();
 
