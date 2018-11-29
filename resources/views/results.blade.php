@@ -59,7 +59,11 @@
                                     <button  class="btn btn-warning">{{'Section: '.$res->lib_section}}</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <button class="btn btn-primary btn-block borrow" data-id="{{$res->id}}" data-toggle="modal" data-target="#borrow" data-title="{{$res->title}}" data-author="{{$res->author}}" data-section="{{$res->lib_section}}"> Borrow</button>
+                                    @guest
+                                    <a class="btn btn-primary btn-block borrow" href="/login"> Login to Borrow</a>
+                                    @else
+                                        <button class="btn btn-primary btn-block borrow" data-id="{{$res->id}}" data-toggle="modal" data-target="#borrow" data-title="{{$res->title}}" data-author="{{$res->author}}" data-section="{{$res->lib_section}}"> Borrow</button>
+                                    @endguest
                                 </div>
                             </div>
                         </div>

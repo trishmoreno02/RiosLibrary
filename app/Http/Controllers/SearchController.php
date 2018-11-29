@@ -39,10 +39,10 @@ class SearchController extends Controller
             $lib_sec = $request->lib_sec;
             if($keyword == '')
             {
-                $results = Books::where('lib_sec', $lib_sec)->whereNotIn('id', $books)->get();
+                $results = Books::where('lib_section', $lib_sec)->whereNotIn('id', $books)->get();
             }
             else{
-                $results = Books::where('title', 'like', '%'.$keyword.'%')->where('lib_sec', $lib_sec)->whereNotIn('id', $books)->get();
+                $results = Books::where('title', 'like', '%'.$keyword.'%')->where('lib_section', $lib_sec)->whereNotIn('id', $books)->get();
             }
         }
         else if($keyword == '')

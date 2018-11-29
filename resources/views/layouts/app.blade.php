@@ -25,9 +25,15 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-dark text-white">
             <div class="container">
-                <a class="navbar-brand text-white" href="/home">
-                    Rio's Library
-                </a>
+                @guest
+                <a class="navbar-brand text-white" href="/">
+                        Rio's Library
+                    </a>
+                @else
+                    <a class="navbar-brand text-white" href="/home">
+                        Rio's Library
+                    </a>
+                @endguest
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,7 +46,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        
+                        @guest
+
+                        @else
                             <li class="nav-item dropdown text-white">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-white"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -58,6 +66,7 @@
                                     </form>
                                 </div>
                             </li>
+                        @endguest
                     </ul>
                 </div>
             </div>
