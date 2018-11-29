@@ -32,7 +32,7 @@ Email: admin@app.com Password: admin-password
 - Since I only have batch files, you can only run this in Windows. I've provided alternative solutions, however.
 
 ### Why use batch files and put MySQL and all these dependencies?
-I focused on user experience on this one. Rather than having the user (you) to type stuff and import this and that or install this and that, I'd rather let you do that in a few clicks (and install PHP).
+I focused on user experience on this one. Rather than having the user (you) to type stuff and import this and that or install this and that, I'd rather let you do that in a fewer clicks as possible.
 (I know putting MySQL isn't advisable, but that's just for the purposes of this exercise)
 
 Please contact me if there are any problems (trishmoreno02@gmail.com).
